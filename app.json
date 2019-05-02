@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription": "stuff",
+        "NSLocationWhenInUseUsageDescription": "stuff"
+      }
     },
     "description": "",
     "githubUrl": "https://github.com/mikimakmel/mobileWorkshop.git"
