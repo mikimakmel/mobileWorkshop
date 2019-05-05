@@ -36,6 +36,11 @@ export default class HomeScreen extends Component {
           title="Accelerometer"
           color="#841584"
         />
+        <Button
+          onPress={() => { navigation.navigate('GesturesScreen') }}
+          title="Gestures"
+          color="#841584"
+        />
       </View>
     )
   }

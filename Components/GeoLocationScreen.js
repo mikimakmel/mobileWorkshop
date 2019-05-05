@@ -62,11 +62,12 @@ export default class GeoLocation extends Component {
     }
 
     // let check = JSON.parse(this.state.location)
-    // console.log(this.state.location.coords)
+    console.log('latitude: ' + this.state.latitude + '    longitude: ' + this.state.longitude)
 
     return (
       <View style={styles.mapContainer}>
         <MapView style={styles.map}
+          showsUserLocation
           region={{
             latitude: this.state.latitude,
             latitudeDelta: 0.1,
