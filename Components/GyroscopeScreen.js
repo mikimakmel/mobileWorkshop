@@ -23,7 +23,7 @@ export default class GyroscopeScreen extends Component {
             fontSize: 18
         },
         headerStyle: {
-            height: 70,
+            height: 50,
         },
     })
 

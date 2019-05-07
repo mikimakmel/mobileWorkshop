@@ -19,10 +19,10 @@ export default class GeoLocation extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: 'GeoLocation',
     headerTitleStyle: {
-        fontSize: 18
+      fontSize: 18
     },
     headerStyle: {
-        height: 70,
+      height: 50,
     },
   })
 

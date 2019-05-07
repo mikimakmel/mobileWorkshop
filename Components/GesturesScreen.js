@@ -1,14 +1,13 @@
 import React, { Component }from 'react'
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native'
 import Draggable from 'react-native-draggable'
 import Swiper from 'react-native-swiper'
+import { Button } from 'react-native-elements'
 
 export default class GesturesScreen extends Component {
 
     constructor(props) {
         super(props)
-        this.state = {
-        }
     }
 
     static navigationOptions = ({ navigation }) => ({
@@ -17,42 +16,39 @@ export default class GesturesScreen extends Component {
             fontSize: 18
         },
         headerStyle: {
-            height: 70,
+            height: 50,
         },
     })
 
     render() {    
         return (
-            <Swiper style={styles.wrapper}>
+            <Swiper>
                 <View style={styles.slide1}>
-                    <Text style={styles.text}>Hello Swiper</Text>
+                    <Text style={styles.text}>Swipe Me</Text>
                 </View>
                 <View style={styles.slide2}>
-                    <Text style={styles.text}>Beautiful</Text>
+                    <Text style={{color: '#fff', fontSize: 30, fontWeight: 'bold', paddingTop: 100}}>Drag My Face</Text>
+                    <Draggable 
+                    renderShape='image' 
+                    imageSource={require('../assets/trump.png')}
+                    renderText='Drag Me'
+                    renderSize={100}
+                    reverse={false} 
+                    offsetX={40} 
+                    offsetY={20} 
+                    /> 
                 </View>
                 <View style={styles.slide3}>
-                    <Text style={styles.text}>And simple</Text>
+                    <TouchableOpacity onLongPress={() => Alert.alert('Build a WALL!')} style={styles.button}>
+                        <Text style={styles.text}>Long Press</Text>
+                    </TouchableOpacity>
                 </View>
             </Swiper>
-
-        // <View>
-        //     <Draggable 
-        //     renderShape='image' 
-        //     imageSource={require('../assets/trump.png')}
-        //     renderText='Drag Me'
-        //     renderSize={100}
-        //     reverse={false} 
-        //     offsetX={10} 
-        //     offsetY={10} 
-        //     /> 
-        // </View>
         )
     }
 }
 
 const styles = StyleSheet.create({
-    wrapper: {
-    },
     slide1: {
       flex: 1,
       justifyContent: 'center',
@@ -61,7 +57,7 @@ const styles = StyleSheet.create({
     },
     slide2: {
       flex: 1,
-      justifyContent: 'center',
+    //   justifyContent: 'center',
       alignItems: 'center',
       backgroundColor: '#97CAE5',
     },
@@ -75,5 +71,15 @@ const styles = StyleSheet.create({
       color: '#fff',
       fontSize: 30,
       fontWeight: 'bold',
-    }
+    },
+    button: {
+        width: 200,
+        height: 200,
+        borderRadius: 400,
+        borderWidth: 4,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'red',
+        borderColor: 'white',
+    },
   })
