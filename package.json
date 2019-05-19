@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "expo": "^32.0.0",
+    "expo-graphics": "^1.1.0",
     "expo-location": "^4.0.0",
     "expo-permissions": "^4.0.0",
+    "expo-three": "^3.0.0-alpha.8",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-chart-kit": "^2.6.1",
@@ -19,7 +21,8 @@
     "react-native-maps": "^0.24.2",
     "react-native-sensors": "^5.1.8",
     "react-native-swiper": "^1.5.14",
-    "react-navigation": "^3.9.1"
+    "react-navigation": "^3.9.1",
+    "three": "^0.104.0"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
